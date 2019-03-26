@@ -31,15 +31,33 @@ Recursive/Cyclic/Repititive Requests are requests that gets made at intervals of
 
 ### Let's Dive In
 You Create a JAX Cyclic Request
-    $cq = new JAX.CyclicRequest(URL, REQUEST_METHOD, QUERY_PARAMETERS, DELAY_IN_MILLISECONDS);
+    ```$cq = new JAX.CyclicRequest(URL, REQUEST_METHOD, QUERY_PARAMETERS, DELAY_IN_MILLISECONDS);```
     
 You Start it:
-    $cq.start();
+    ```$cq.start();```
     
 #### Events
+**Format:** ```$cq.EVENT_NAME = function(){ //...block of code }```
+
+##### onsuccess
+When the Request was completed successfully just like the success callback
+##### onfailure
+When the Request Failed (Normally not Always Called)
+##### oncyclestart
+Called Before the Start of every request cycle
+##### oncycleend
+Called at the very end of every request cycle
+
+#### Controls
+**Format:** ```$cq.CONTROL_NAME()```
+
+##### hold
+stops the continuity of the request
+##### unhold
+continues a sttoped requests
 
 ## Brief Explanation
    CALLBACKS can either be a function or the name of a function and they take argument which will contain the refined responseText from the url. At present, JAX can only runs 1 Request at a time but we hope to change this soon meanwhile, Enjoy JAXIFY to the Fullest.
    
-**Note: THIS IS NOT YET A STABLE RELEASE OF JAXIFY.JS BUT YOU ARE FREE TO TRY IT AND GIVE US CONTRIBUTIONS OR IDEAS
+**Note: THIS IS NOT YET A STABLE RELEASE OF JAXIFY.JS BUT YOU ARE FREE TO TRY IT AND GIVE US CONTRIBUTIONS OR IDEAS**
    
