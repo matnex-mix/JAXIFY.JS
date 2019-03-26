@@ -25,6 +25,21 @@ A JavaScript Library for AJAX Requests (Recursive) with form submission, url reg
    **Format:** `JAX.sendForm(REGISTERED_URL_INDEX, HTML_FORM_ELEMENT)`
    
    **Example:** `$('form').on("submit", function() { JAX.sendForm(0, this); })`
+
+## Using Recursive Requests
+Recursive/Cyclic/Repititive Requests are requests that gets made at intervals of time, they can be hold or left to run to infinity. Recursive Requests are useful for doing a no load message chatting system, instant notification system e.t.c
+
+### Let's Dive In
+You Create a JAX Cyclic Request
+    $cq = new JAX.CyclicRequest(URL, REQUEST_METHOD, QUERY_PARAMETERS, DELAY_IN_MILLISECONDS);
+    
+You Start it:
+    $cq.start();
+    
+#### Events
+
+## Brief Explanation
+   CALLBACKS can either be a function or the name of a function and they take argument which will contain the refined responseText from the url. At present, JAX can only runs 1 Request at a time but we hope to change this soon meanwhile, Enjoy JAXIFY to the Fullest.
    
-  ## Brief Explanation
+**Note: THIS IS NOT YET A STABLE RELEASE OF JAXIFY.JS BUT YOU ARE FREE TO TRY IT AND GIVE US CONTRIBUTIONS OR IDEAS
    
