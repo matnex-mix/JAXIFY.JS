@@ -18,4 +18,13 @@ A JavaScript Library for AJAX Requests (Recursive) with form submission, url reg
    
    **Example:** `JAX.registerLoader($('#loader')[0], "active")` or `JAX.registerLoader("loader", "active")`
 
-
+4. #### Starting Loader: (USED BY JAX ITSELF)
+   **Format:** `JAX.runLoader()`
+   
+5. #### Sending Forms Data to url
+   **Format:** `JAX.sendForm(REGISTERED_URL_INDEX, HTML_FORM_ELEMENT)`
+   
+   **Example:** `$('form').on("submit", function() { JAX.sendForm(0, this); })`
+   
+  ## Brief Explanation
+   
